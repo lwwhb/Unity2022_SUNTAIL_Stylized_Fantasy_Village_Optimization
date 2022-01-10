@@ -7,6 +7,8 @@
     "com.unity.ide.rider": "3.0.7",
     "com.unity.ide.visualstudio": "2.0.12",
     "com.unity.ide.vscode": "1.2.4",
+    "com.unity.memoryprofiler": "0.4.3-preview.1",
+    "com.unity.project-auditor": "git@github.com:Unity-Technologies/ProjectAuditor.git",
     "com.unity.render-pipelines.universal": "12.1.2",
     "com.unity.test-framework": "1.1.29",
     "com.unity.textmeshpro": "3.0.6",
