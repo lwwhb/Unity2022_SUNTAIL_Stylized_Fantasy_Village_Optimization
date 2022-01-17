@@ -1,5 +1,5 @@
 # SUNTAIL - Stylized Fantasy Village项目优化工程
-![Unity性能优化 课程预告](/Users/haibowang/Downloads/MyProjects/Unity2022_SUNTAIL_Stylized_Fantasy_Village_Optimization/Documents/Pics/00.png)
+![Unity性能优化 课程预告](./Documents/Pics/00.png)
 
 针对AssetStore上的SUNTAIL - Stylized Fantasy Village项目工程在Android和IOS平台的优化
 
