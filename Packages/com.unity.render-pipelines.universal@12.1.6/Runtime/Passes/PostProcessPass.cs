@@ -1139,14 +1139,21 @@ namespace UnityEngine.Rendering.Universal.Internal
         void SetupBloom(CommandBuffer cmd, RenderTargetIdentifier source, Material uberMaterial)
         {
             // Start at half-res
-            int tw = m_Descriptor.width >> 1;
-            int th = m_Descriptor.height >> 1;
+            //---bloom opt 修改定义从多大分辨率从4分之一开始
+            //int tw = m_Descriptor.width >> 1;
+            //int th = m_Descriptor.height >> 1;
+            int tw = m_Descriptor.width >> 2;
+            int th = m_Descriptor.height >> 2;
+            //---
 
             // Determine the iteration count
             int maxSize = Mathf.Max(tw, th);
             int iterations = Mathf.FloorToInt(Mathf.Log(maxSize, 2f) - 1);
             iterations -= m_Bloom.skipIterations.value;
-            int mipCount = Mathf.Clamp(iterations, 1, k_MaxPyramidSize);
+            //---bloom opt 修改最大downscale迭代次数
+            //int mipCount = Mathf.Clamp(iterations, 1, k_MaxPyramidSize);
+            int mipCount = Mathf.Clamp(iterations, 1, 4);
+            //---
 
             // Pre-filtering parameters
             float clamp = m_Bloom.clamp.value;
